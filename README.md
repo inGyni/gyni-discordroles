@@ -13,6 +13,8 @@ You have 3 exports:
 
 `exports["resource"]:UserHasRole(source, role)`
 
+This functions returns a boolean.
+
 **NOTE:** `role` is the discord role id.
 To get it you must enable developer mode in discord advanced settings, then right click the role and copy id.
 
