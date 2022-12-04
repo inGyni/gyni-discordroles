@@ -25,7 +25,7 @@ To get it you must enable developer mode in discord advanced settings, then righ
 Config = {}
 
 Config.BotToken = "" -- DISCORD BOT TOKEN
-Config.GuildID = {  -- DISCORD SERVER IDs (GUILD IDs) FOR CHECKING
+Config.GuildIDs = {  -- DISCORD SERVER IDs (GUILD IDs) FOR CHECKING
 	"01234567890123456789",
 	"01234567890123456789"
 }
