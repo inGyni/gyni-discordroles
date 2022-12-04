@@ -5,17 +5,19 @@
 
 You have 3 exports:
 
-* `GetUserRoles(source)` Retrieves all the user's roles into a Lua Table.
-* `GetDiscordID(source)` Retrieves the user's discord id.
+* `GetUserRoles(source)` Returns all the user's roles into a Lua Table.
 * `UserHasRole(source, role)` Returns a boolean
+* `GetDiscordID(source)` Returns the user's discord id.
 
-**Export example:**
+**Export examples:**
 
-`exports["resource"]:UserHasRole(source, role)`
+* `exports["resourcename"]:GetUserRoles(source)`
+* `exports["resourcename"]:UserHasRole(source, roleid)`
+* `exports["resourcename"]:GetDiscordID(source)`
 
 This functions returns a boolean.
 
-**NOTE:** `role` is the discord role id.
+**NOTE:** `roleid` is the discord role id.
 To get it you must enable developer mode in discord advanced settings, then right click the role and copy id.
 
 ## Configuration:
@@ -23,8 +25,17 @@ To get it you must enable developer mode in discord advanced settings, then righ
 Config = {}
 
 Config.BotToken = "" -- DISCORD BOT TOKEN
-Config.GuildID = "" -- DISCORD SERVER ID (GUILD ID) FOR CHECKING
+Config.GuildID = {  -- DISCORD SERVER IDs (GUILD IDs) FOR CHECKING
+	"01234567890123456789",
+	"01234567890123456789"
+}
 ```
 
+## Changelog
 
-License: `GNU GENERAL PUBLIC LICENSE V3.0`
+04/12/2022:
+Added support for multiple guild checking.
+
+
+## License 
+`GNU GENERAL PUBLIC LICENSE V3.0`
